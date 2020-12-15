@@ -18,16 +18,17 @@ html {
   background-attachment: fixed;
 }
 
-table,
-td {
+table {
   width: 100%;
   font-size: 2rem;
   border: 1px solid #333;
-}
-
-table {
   border-spacing: 10px;
   border-collapse: separate;
+}
+
+td {
+  font-size: 1rem;
+  border: 1px solid #333;
 }
 
 button {
