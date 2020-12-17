@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../styles/button.css';
+
 class ScheduleLoader extends React.Component {
 
     state = {
@@ -71,7 +73,6 @@ class ScheduleLoader extends React.Component {
             }
         });
         this.setState({appts:appointments});
-        console.log(appointments);
     }
 
     formatFutureAppt = (appt) => {

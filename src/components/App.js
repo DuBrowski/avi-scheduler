@@ -3,6 +3,10 @@ import ScheduleLoader from './ScheduleLoader';
 import Head from './Board/Head';
 import Row from './Board/Row';
 
+import '../styles/layout.css'
+import '../styles/table.css';
+
+
 class App extends React.Component {
     state = {
         scheduleArray: []
@@ -16,10 +20,10 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <div className="ui form container">
+                <div>
                     <ScheduleLoader setParentState={this.setScheduleState}/>
                 </div>
-                <table>
+                <table className="ui celled table">
                     <Head/>
                     <tbody>
                         <Row appts= {this.state.scheduleArray}/>

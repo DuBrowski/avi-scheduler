@@ -6,7 +6,6 @@ class Head extends React.Component {
         return (
             <thead>
                 <tr>
-                    <th>Spot</th>
                     <th>Name</th>
                     <th>Dr</th>
                     <th>Tech</th>
