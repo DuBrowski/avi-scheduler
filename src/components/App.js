@@ -3,35 +3,34 @@ import ScheduleLoader from './ScheduleLoader';
 import Head from './Board/Head';
 import Row from './Board/Row';
 
-import '../styles/layout.css'
+import '../styles/layout.css';
 import '../styles/table.css';
 
-
 class App extends React.Component {
-    state = {
-        scheduleArray: []
-    }
+  state = {
+    scheduleArray: [],
+  };
 
-    setScheduleState = scheduleArray => {
-        const newArr = this.state.scheduleArray.concat(scheduleArray);
-        this.setState({scheduleArray: newArr});
-    }
+  setScheduleState = (scheduleArray) => {
+    const newArr = this.state.scheduleArray.concat(scheduleArray);
+    this.setState({ scheduleArray: newArr });
+  };
 
-    render() {
-        return (
-            <>
-                <div>
-                    <ScheduleLoader setParentState={this.setScheduleState}/>
-                </div>
-                <table className="ui celled table">
-                    <Head/>
-                    <tbody>
-                        <Row appts= {this.state.scheduleArray}/>
-                    </tbody>
-                </table>
-            </>
-        );
-    }
+  render() {
+    return (
+      <>
+        <div>
+          <ScheduleLoader setParentState={this.setScheduleState} />
+        </div>
+        <table>
+          <Head />
+          <tbody>
+            <Row appts={this.state.scheduleArray} />
+          </tbody>
+        </table>
+      </>
+    );
+  }
 }
 
 export default App;
